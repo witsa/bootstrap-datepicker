@@ -1,6 +1,9 @@
 Changelog
 =========
 
+1.3.0 (WIT)
+* Fix for loosing date while clicking on missing next/previous element
+
 1.3.0
 -----
 
