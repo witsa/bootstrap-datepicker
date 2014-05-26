@@ -964,7 +964,7 @@
 									this._setDate(UTCDate(year, month, day));
 								}
 							}
-							else {
+							else if (target.is('.year')){ // restrict to year elements
 								day = 1;
 								month = 0;
 								year = parseInt(target.text(), 10)||0;
@@ -972,6 +972,9 @@
 								this._trigger('changeYear', this.viewDate);
 								if (this.o.minViewMode === 2){
 									this._setDate(UTCDate(year, month, day));
+								} else {
+								  //  managed click on unknow element, may be parent element 
+								  break;
 								}
 							}
 							this.showMode(-1);
