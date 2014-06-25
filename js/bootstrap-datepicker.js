@@ -1020,7 +1020,9 @@
 			if (!date){
 				this.dates.clear();
 			}
-			else if (ix !== -1){
+			else if (
+				(this.o.multidate === false || this.o.multidate !== 1) // ensure deselection of current date only with multidata (multiselection) enabled
+				&& ix !== -1){
 				this.dates.remove(ix);
 			}
 			else {
